@@ -23,7 +23,7 @@ import javax.validation.Valid
 class CartController (val cartService: CartServiceImpl){
 
     @PostMapping("/")
-    @ApiOperation(value = "create cart definition")
+    @ApiOperation(value = "create cart definition", notes = "If idCart is sent then it will update the existing order otherwise it will create a new one.")
     fun createCart(@Valid @RequestBody cartDTO: CartDTO) : ResponseEntity<CartOutput>
             = ResponseEntity<CartOutput>(this.cartService.createCart(cartDTO), HttpStatus.OK)
 

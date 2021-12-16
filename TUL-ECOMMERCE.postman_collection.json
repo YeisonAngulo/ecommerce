@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "fdc6ae51-dfc2-4b95-8f4f-29b4ae7e3371",
+		"name": "TUL-ECOMMERCE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "List Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ecommerce/api/product/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ecommerce",
+								"api",
+								"product",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"typeProduct\": \"SIMPLE\",\r\n    \"name\": \"METAL DOOR 1\",\r\n    \"sku\": \"100123123\",\r\n    \"description\": \"METAL DOOR DESIGNED BY YEISON\",\r\n    \"price\": 100000.0,\r\n    \"stock\": 10,\r\n    \"status\": \"ACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ecommerce/api/product/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ecommerce",
+								"api",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Poduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"typeProduct\": \"SIMPLE\",\r\n    \"name\": \"METAL DOOR\",\r\n    \"sku\": \"100123124\",\r\n    \"description\": \"METAL DOOR DESIGNED BY YEISON\",\r\n    \"price\": 500000.0,\r\n    \"stock\": 10,\r\n    \"status\": \"INACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ecommerce/api/product/13d55d57-5bc7-47f4-a3c0-fe964d77db41",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ecommerce",
+								"api",
+								"product",
+								"13d55d57-5bc7-47f4-a3c0-fe964d77db41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Poduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ecommerce/api/product/13d55d57-5bc7-47f4-a3c0-fe964d77db41",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ecommerce",
+								"api",
+								"product",
+								"13d55d57-5bc7-47f4-a3c0-fe964d77db41"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Process Cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCart\":\"\",\r\n    \"cartDetail\" : [\r\n        {\r\n            \"idProduct\" : \"13d55d57-5bc7-47f4-a3c0-fe964d77db41\",\r\n            \"quantity\" : \"1\"\r\n        }\r\n        \r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ecommerce/api/cart/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ecommerce",
+								"api",
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Carts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ecommerce/api/cart/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ecommerce",
+								"api",
+								"cart",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Checkout Cart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ecommerce/api/cart/33d55d57-5bc7-47f4-a3c0-fe964d77db41",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ecommerce",
+								"api",
+								"cart",
+								"33d55d57-5bc7-47f4-a3c0-fe964d77db41"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
